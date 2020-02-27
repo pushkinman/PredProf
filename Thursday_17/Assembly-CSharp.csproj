@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraFix.cs" />
+    <Compile Include="Assets\Scripts\CoinScore.cs" />
     <Compile Include="Assets\Scripts\MenuControls.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Reference Include="Unity.Timeline.Editor">

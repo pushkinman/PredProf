@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -11,16 +11,21 @@ public class Movement : MonoBehaviour
 
     public GameObject ball;
 
+    public static int score;
+    public Text scoreText;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        scoreText.text = "Score: " + score;
+        
         if (Input.GetKey(KeyCode.W))
         {         
             //transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -45,11 +50,4 @@ public class Movement : MonoBehaviour
 
 
     }
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.gameObject.name == "Door")
-    //        SceneManager.LoadScene("AnotherScene");
-    //    if (collision.gameObject.name == "Cube")
-    //        ball.transform.position = new Vector3(100,100,100);
-    //}
 }
